@@ -1,0 +1,16 @@
+@media screen and (min-width:770px) {
+    .AllBlog {
+        position: relative;
+        margin-left: 20%;
+        margin-top: 5em;
+        width: 78%;
+    }
+}
+
+@media screen and (max-width:769px) {
+    .AllBlog {
+        position: relative;
+        margin-top: 5em;
+        width: 100%;
+    }
+}

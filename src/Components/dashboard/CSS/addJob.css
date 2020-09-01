@@ -1,0 +1,163 @@
+.addForm {
+    /* z-index: -1; */
+    position: relative;
+    margin-left: 20%;
+    margin-top: 5em;
+    width: 78%;
+    margin-bottom: 2em;
+    height: fit-content;
+}
+
+.jobDescription {
+    height: 20em;
+}
+
+.form-title {
+    color: #01060f;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-left: 1em;
+    margin-top: 0.5em;
+    opacity: 0.9;
+}
+
+.publishJob {
+    margin-top: 4em;
+    margin-bottom: 1em;
+    /* position: absolute; */
+    margin-left: 1em;
+    /* text-align: center; */
+}
+
+.publish-btn {
+    height: 2.5em;
+    width: 6em;
+    color: white;
+    background-color: #01060f;
+    border-radius: 0.3em;
+    -webkit-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+    -ms-border-radius: 0.3em;
+    -o-border-radius: 0.3em;
+    border: none;
+    opacity: 0.9;
+    font-weight: bold;
+    transition: opacity 1s, width 0.5s;
+    -webkit-transition: opacity 1s, width 0.5s;
+    -moz-transition: opacity 1s, width 0.5s;
+    -ms-transition: opacity 1s, width 0.5s;
+    -o-transition: opacity 1s, width 0.5s;
+}
+
+.publish-btn:hover {
+    opacity: 1;
+    width: 5em;
+}
+
+@media screen and (max-width:769px) {
+    .jobForm {
+        margin-left: 5%;
+        margin-top: 5em;
+        width: 90%;
+    }
+    .form-title {
+        font-size: 1em;
+        font-weight: 500;
+        opacity: 0.9;
+    }
+}
+
+.job-col1 {
+    width: 49%;
+    display: inline-table;
+}
+
+.job {
+    margin-left: 2%;
+    /* width: 48%;
+    display: inline-table; */
+}
+
+@keyframes previewImg {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.JobImage {
+    opacity: 1;
+    width: 49%;
+    height: 20em;
+    border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+    -ms-border-radius: 0.5em;
+    -o-border-radius: 0.5em;
+    display: inline-table;
+    margin-right: 2%;
+    border: 0.5px solid rgba(1, 6, 15, 0.2);
+    animation-name: previewImg;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
+}
+
+.selectImage {
+    width: 49%;
+    display: inline-table;
+}
+
+.jobDescription {
+    margin-top: 1em;
+    border-radius: 3em;
+    -webkit-border-radius: 3em;
+    -moz-border-radius: 3em;
+    -ms-border-radius: 3em;
+    -o-border-radius: 3em;
+}
+
+
+/* .jobImgInd {} */
+
+@media screen and (max-width:769px) {
+    .job-col1 {
+        width: 100%;
+        display: initial;
+        margin-bottom: 1em;
+    }
+    .job {
+        margin-left: 0;
+        display: initial;
+        margin-bottom: 1em;
+        /* width: 100%; */
+        /* width: 48%;
+        display: inline-table; */
+    }
+    .JobImage {
+        width: 100%;
+        height: 20em;
+        border-radius: 0.5em;
+        -webkit-border-radius: 0.5em;
+        -moz-border-radius: 0.5em;
+        -ms-border-radius: 0.5em;
+        -o-border-radius: 0.5em;
+        display: initial;
+        margin-right: 0%;
+        margin-bottom: 1em;
+    }
+    .selectImage {
+        width: 100%;
+        display: initial;
+        margin-bottom: 1em;
+    }
+}
+
+@media screen and (max-width:481px) {
+    .addForm {
+        margin-left: 5%;
+        margin-top: 5em;
+        width: 90%;
+    }
+}

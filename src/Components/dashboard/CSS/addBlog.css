@@ -1,0 +1,84 @@
+.addForm {
+    /* z-index: -1; */
+    position: relative;
+    margin-left: 20%;
+    margin-top: 5em;
+    width: 78%;
+    margin-bottom: 2em;
+    height: fit-content;
+}
+
+.add-new-post__editor {
+    height: 22em;
+}
+
+.form-title {
+    color: #01060f;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-left: 1em;
+    margin-top: 0.5em;
+    opacity: 0.9;
+}
+
+.publish {
+    /* margin-top: 34em; */
+    /* position: absolute; */
+    margin-left: 1em;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    /* text-align: center; */
+}
+
+.publish-btn {
+    height: 2.5em;
+    width: 6em;
+    color: white;
+    background-color: #01060f;
+    border-radius: 0.3em;
+    -webkit-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+    -ms-border-radius: 0.3em;
+    -o-border-radius: 0.3em;
+    border: none;
+    opacity: 0.9;
+    font-weight: bold;
+    transition: opacity 1s, width 0.5s;
+    -webkit-transition: opacity 1s, width 0.5s;
+    -moz-transition: opacity 1s, width 0.5s;
+    -ms-transition: opacity 1s, width 0.5s;
+    -o-transition: opacity 1s, width 0.5s;
+}
+
+.publish-btn:hover {
+    opacity: 1;
+    width: 5em;
+}
+
+@media screen and (max-width:769px) {
+    .addForm {
+        margin-left: 5%;
+        margin-top: 5em;
+        width: 90%;
+        background-color: red;
+    }
+    .publish {
+        margin-left: 1em;
+        margin-top: 4em;
+        margin-bottom: 1em;
+    }
+}
+
+@media screen and (max-width:481px) {
+    .addForm {
+        margin-left: 5%;
+        margin-top: 5em;
+        width: 90%;
+    }
+}
+
+#postFeedback {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 0.5em
+}
