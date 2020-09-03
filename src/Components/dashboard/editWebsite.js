@@ -6,16 +6,15 @@ import {
   Card,
   CardBody,
   Form,
-  FormInput,
-  Button,
   FormSelect
 } from "shards-react";
 import AdminFooter from "./admin-footer";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const axios = require("axios");
 
-function EditWebsite() {
+const EditWebsite = () => {
+
   document.title = "DarkBank | Admin | EDIT THE WEBSITE CONTENT";
 
   const [sitePart, setSitePart] = useState("");
@@ -48,14 +47,14 @@ function EditWebsite() {
             "Great! You've just updated the website content.";
           document.getElementById("editFeedback").style.color =
             "rgba(1,16,10,1)";
-            console.log(response);
+            // console.log(response);
         })
 
         .catch(function(err) {
           document.getElementById("editFeedback").innerHTML =
             err.response.data.message;
           document.getElementById("editFeedback").style.color = "red";
-          console.log(err);
+          // console.log(err);
         });
     } else {
       document.getElementById("editFeedback").innerHTML =
@@ -65,7 +64,7 @@ function EditWebsite() {
   };
   return (
     <div>
-      {/* <AdminDashboard /> */}
+      <AdminDashboard />
       <div> . </div>
       <Card small className="addForm">
         <div className="form-title"> EDIT / UPDATE THE WEBSITE BELOW </div>

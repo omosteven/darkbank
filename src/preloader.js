@@ -2,7 +2,7 @@ import React from "react";
 
 import "./preloader.css";
 
-function Preloader() {
+const Preloader = () => {
   function remove() {
     document.getElementById("pre").style.display = "none";
   }

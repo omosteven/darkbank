@@ -1,9 +1,11 @@
 import React from "react";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import "./CSS/auth.css";
 
-function Auth() {
+const Auth = () => {
+ 
   document.title = "DarkBank | Admin | LOGIN TO DASHBOARD";
 
   return (
