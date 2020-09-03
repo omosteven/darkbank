@@ -36,14 +36,17 @@ const developerSchema = mongoose.Schema({
 
     JOBSALARYSTARTRANGE: {
         type: String,
-        required: true,
-        unique: true
+        required: true
     },
 
     JOBSALARYENDRANGE: {
         type: String,
-        required: true,
-        unique: true
+        required: true
+    },
+
+    JOBVALIDITY: {
+        type: String,
+        required: true
     },
 
     QUERYPERIOD: {
@@ -57,5 +60,6 @@ developerSchema.plugin(timestamps, {
     createdAt: 'created_at',
     updatedAt: 'updated_at'
 });
+// developerSchema.QUERYPERIOD instanceof Date;
 
 module.exports = mongoose.model("DEVELOPERDATA", developerSchema);

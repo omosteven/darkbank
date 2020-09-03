@@ -17,6 +17,8 @@ var FetchAllJobs = function FetchAllJobs(type, request, response) {
                 data: err
             })
         } else {
+            // t = res.created_at;
+            // res["created_at"] = "tes",
             response.status(200).send({
                 type: type,
                 route: "/job/fetchAll",

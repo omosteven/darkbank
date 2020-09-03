@@ -1,13 +1,12 @@
 {
-  "name": "DarkBank",
+  "name": "darkbank",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Steven",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -17,5 +16,15 @@
     "mongoose-timestamp": "^0.6.0",
     "nodemailer": "^6.4.11",
     "password-hash": "^1.2.2"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omosteven/darkbank.git"
+  },
+  "bugs": {
+    "url": "https://github.com/omosteven/darkbank/issues"
+  },
+  "homepage": "https://github.com/omosteven/darkbank#readme",
+  "description": "DarkBank NodeJs Powered Backend"
 }

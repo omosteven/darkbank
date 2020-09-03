@@ -10,7 +10,7 @@ var path = require('path');
 
 const verifyToken = require("../util/verifyToken");
 
-var PostBlog = function PostBlog(type, request, response) {
+const PostBlog = (type, request, response) => {
 
     Request = request;
 
@@ -21,8 +21,11 @@ var PostBlog = function PostBlog(type, request, response) {
     const {
 
         POSTEDBY,
+
         BLOGTITLE,
+
         BLOGPOST,
+
         BLOGIMAGE
 
     } = request;
@@ -30,39 +33,67 @@ var PostBlog = function PostBlog(type, request, response) {
     let vT = verifyToken.verifyToken(POSTEDBY);
 
     if (vT === "Error") {
+
         response.status(404).send({
+
             type: type,
+
             route: "/blog/newpost",
+
             request: request,
+
             message: "Sorry, an error occurred!",
+
             data: {
+
                 database: "mongoDB",
+
                 architecture: "mongoose"
+
             }
+
         })
+
     } else if (vT === "Expired!") {
+
         response.status(402).send({
+
             type: type,
+
             route: "/blog/newpost",
+
             request: request,
+
             message: "Ops, Your session has expired! You may need to sign in again.",
+
             data: {
+
                 database: "mongoDB",
+
                 architecture: "mongoose"
+
             }
+
         })
+
     } else {
 
         if (ValidateInput.ValidateInput({
 
                 POSTEDBY,
+
                 BLOGTITLE,
+
                 BLOGPOST,
+
                 BLOGIMAGE
+
 
             }, request)) {
 
             if (validator.isEmail(vT)) { //validate getEmail()
+
+                request.POSTEDBY = vT;
 
                 // console.log(Request.file.filename);
 
@@ -81,55 +112,100 @@ var PostBlog = function PostBlog(type, request, response) {
                 PostBlog.save()
 
                 .then(() => {
+
                     response.status(200).send({
+
                         type: type,
+
                         route: "/blog/newpost",
+
                         request: request,
+
                         message: "Great! You've just added a new blog post.",
+
                         data: {
+
                             database: "mongoDB",
+
                             architecture: "mongoose"
+
                         }
+
                     })
+
                 })
 
                 .catch(() => {
+
                     response.status(400).send({
+
                         type: type,
+
                         route: "/blog/newpost",
+
                         request: request,
+
                         message: "Sorry, an error occurred!",
+
                         data: {
+
                             database: "mongoDB",
+
                             architecture: "mongoose"
+
                         }
                     })
                 })
+
             } else {
+
                 response.status(401).send({
+
                     type: type,
+
                     route: "/blog/newpost",
+
                     request: request,
+
                     message: "Sorry, you're not authorized for this!",
+
                     data: {
+
                         database: "mongoDB",
+
                         architecture: "mongoose"
+
                     }
+
                 })
+
             }
+
         } else {
+
             response.status(401).send({
+
                 type: type,
+
                 route: "/blog/newpost",
+
                 request: request,
+
                 message: "Ops, seems all the fields are not well filled!",
+
                 data: {
+
                     database: "mongoDB",
+
                     architecture: "mongoose"
+
                 }
+
             })
 
+
         }
+
     }
 
 }
